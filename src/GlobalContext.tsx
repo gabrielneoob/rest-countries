@@ -1,4 +1,4 @@
-import React, { Dispatch, createContext, useContext, useReducer, useState } from "react";
+import React, {  createContext, useContext, useReducer, useState } from "react";
 import { countryReducer, initialState } from "./reducers/countryReducer";
 import { CountryProps } from "./components/countryCard/CountryCard";
 import { api } from "./api";
