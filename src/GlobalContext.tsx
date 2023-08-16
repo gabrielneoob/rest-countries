@@ -22,8 +22,8 @@ const Context = createContext<ContextProps>({
   },
   countriesByRegion: [],
   toggleBg: () => {},
-  changeInput: (e) => {},
-  loadCountriesByRegion: (region) => {}
+  changeInput: () => {},
+  loadCountriesByRegion: () => {}
 })
 
 

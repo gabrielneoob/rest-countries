@@ -1,4 +1,3 @@
-import React from 'react'
 import { Styles } from './styles';
 import { countryContext } from '../../GlobalContext';
 import { useNavigate } from 'react-router-dom';

@@ -1,8 +1,6 @@
-import React, { useState, useReducer } from 'react'
 import { BsMoonFill, BsMoon } from 'react-icons/bs'
 import { Styles } from './styles'
 import { Container } from '../../GlobalStyle'
-import { countryReducer, initialState } from '../../reducers/countryReducer'
 import { countryContext } from '../../GlobalContext'
 
 const Header = () => {

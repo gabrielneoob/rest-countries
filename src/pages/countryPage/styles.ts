@@ -1,4 +1,4 @@
-import { styled, css, CSSProp } from "styled-components";
+import { styled } from "styled-components";
 import { bgValue } from "../../GlobalStyle";
 
 const Page = styled.div`
