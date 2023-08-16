@@ -1,23 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useReducer } from 'react'
 import { BsMoonFill, BsMoon } from 'react-icons/bs'
 import { Styles } from './styles'
 import { Container } from '../../GlobalStyle'
+import { countryReducer, initialState } from '../../reducers/countryReducer'
+import { countryContext } from '../../GlobalContext'
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  // const [state, dispatch] = useReducer(countryReducer, initialState);
+  const {state, toggleBg } = countryContext();
   return (
-    <Styles.BackGroundHeader>
+    <Styles.BackGroundHeader toggleBg={state.toggleBg}>
       <Container>
         <Styles.Header>
           <Styles.Title>
             Where in the world?
           </Styles.Title>
           <Styles.Toggle 
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={toggleBg}
           >
-            { darkMode ? <BsMoon /> : <BsMoonFill />}
+            { state.toggleBg ? <BsMoon /> : <BsMoonFill />}
             <Styles.SchemeTitle>
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
+              {state.toggleBg ? 'Light Mode' : 'Dark Mode'}
             </Styles.SchemeTitle>
           </Styles.Toggle>
         </Styles.Header>

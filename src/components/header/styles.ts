@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
+import { bgValue } from '../../GlobalStyle'
 
-const BackGroundHeader = styled.div`
-  box-shadow: 0px 2px 2px #eee;
-  background-color: var(--white);
+const BackGroundHeader = styled.div<bgValue>`
+  box-shadow: ${(prop) => prop.toggleBg ? '0px 2px 2px #123': '0px 2px 2px #eee'};
+  background-color: ${(prop) => prop.toggleBg ? 'var(--dark-blue)': 'var(--white)'};
   position: fixed;
   z-index: 5;
   width: 100%;
@@ -17,6 +18,10 @@ const Header = styled.header`
 
 const Title = styled.h1`
   font-weight: 800;
+  
+  @media(max-width: 900px) {
+    font-size: 1rem;
+  }
 `
 
 const Toggle = styled.div`
