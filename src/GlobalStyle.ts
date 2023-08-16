@@ -3,7 +3,11 @@ type Props = {
   padTop?: boolean;
 }
 
-export const GlobalStyle = createGlobalStyle`
+export type bgValue = {
+  toggleBg: boolean;
+}
+
+export const GlobalStyle = createGlobalStyle<bgValue>`
   :root {
     --dark-blue: hsl(209, 23%, 22%);
     --dark-blue-dark: hsl(207, 26%, 17%);
@@ -18,6 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
+    color: ${(prop) => prop.toggleBg ? 'var(--white)': '#000'};
   }
 
   img {
@@ -27,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     height: 100vh;
-    background-color: var(--very-light);
+    background-color: ${(prop) => prop.toggleBg ? 'var(--dark-blue-dark)' : 'var(--very-light)'};
   }
 `
 
