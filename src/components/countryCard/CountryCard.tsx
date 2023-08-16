@@ -1,8 +1,12 @@
 import React from 'react'
 import { Styles } from './styles';
+import { countryContext } from '../../GlobalContext';
+import { useNavigate } from 'react-router-dom';
+
 export type CountryProps = {
   altSpellings?: string[];
   area?: number;
+  borders: string[];
   capital?: string[];
   capitalInfo?: {
     latlng: string[]
@@ -62,8 +66,13 @@ export type CountryProps = {
 }
 
 const CountryCard = ({ data } : {data: CountryProps}) => {
+  const navigate = useNavigate()
+  const { state } = countryContext()
   return (
-    <Styles.CardContainer>
+    <Styles.CardContainer
+    toggleBg={state.toggleBg}
+    onClick={() => navigate(`${data.name.common}`)}
+    >
       <Styles.FlagBox>
         <img src={data.flags.png} alt="" />
       </Styles.FlagBox>

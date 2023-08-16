@@ -1,13 +1,14 @@
 import { styled } from "styled-components";
+import { bgValue } from "../../GlobalStyle";
 
-const CardContainer = styled.div`
+const CardContainer = styled.div<bgValue>`
   display: flex;
   flex-direction: column;
   max-width: 250px;
   min-width: 250px;
   border-radius: 6px;
   cursor: pointer;
-  background-color: var(--white);
+  background-color: ${(prop) => prop.toggleBg ? 'var(--dark-blue)': 'var(--white)'};
 `
 
 const FlagBox = styled.div`
