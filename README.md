@@ -1,9 +1,8 @@
 # REST Countries API with color theme switcher solution
 
-[Front end mento solution](https://www.frontendmentor.io/solutions/responsive-rest-countries-api-reactjs-typescript-X3vP0g5A8E)
+[Front end mentor solution](https://www.frontendmentor.io/solutions/responsive-rest-countries-api-reactjs-typescript-X3vP0g5A8E)
 
-[[](!rest-countries.png)](https://heroic-clafoutis-096f30.netlify.app/)
-[](!rest-countries.png)
+![alt text](rest-countries.jpg)
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 ### Links
@@ -39,9 +38,7 @@ Users should be able to:
 ## Run the project
 
 ```
-{
   git clone
   npm install
   npm run dev
-}
 ```
