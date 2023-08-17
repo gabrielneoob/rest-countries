@@ -26,6 +26,7 @@ const CountryPage = () => {
 
   useEffect(() => {
     loadCurrentCountry()
+    console.log(currentCountry)
   }, [currentCountry])
 
   if(currentCountry) {
@@ -86,12 +87,13 @@ const CountryPage = () => {
                 </Styles.Languages>
               </Box>
             </Flex>
-              <Flex css={{alignItems: 'center', marginTop: '3rem', flexWrap: 'wrap', gap: '1rem'}}>
+            {borders && <Flex css={{alignItems: 'center', marginTop: '3rem', flexWrap: 'wrap', gap: '1rem'}}>
                 <span>Border Countries: </span>
                 {borders.map((country) => <Box css={{backgroundColor: state.toggleBg ? 'var(--dark-blue)' : 'var(--white)', marginLeft: '0.7rem', fontSize: '0.8rem', justifyContent: 'center', padding: '0.3rem 0.5rem', borderRadius: '4px', fontWeight: '700'}}> 
                   {country}
                 </Box>)}
-              </Flex>
+              </Flex>}
+
           </Styles.CountryDetails>
         </Flex>
       </Styles.Page>

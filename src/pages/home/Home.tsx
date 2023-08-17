@@ -16,7 +16,6 @@ const Home = () => {
 
   useEffect(() => {
     loadCountriesByRegion(testSelect)
-    console.log(countriesByRegion)
   }, [testSelect])
 
 
@@ -39,7 +38,7 @@ const Home = () => {
           </Select>
         </Flex>
       <CountryContainer>
-        {state.countryInput ? countriesByRegion.filter((country) => country.name.common.toLowerCase().startsWith(state.countryInput.toLowerCase())).map((country) => <CountryCard data={country}/>) : countriesByRegion.map((countrie) => <CountryCard data={countrie}/>)}
+        {state.countryInput ? countriesByRegion.filter((country) => country.name.common.toLowerCase().startsWith(state.countryInput.toLowerCase())).map((country) => <CountryCard data={country} key={country.name.common.toLowerCase()}/>) : countriesByRegion.map((countrie) => <CountryCard data={countrie} key={countrie.name.common.toLowerCase()}/>)}
       </CountryContainer>
     </>
   )
