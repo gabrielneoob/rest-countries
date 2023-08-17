@@ -2,6 +2,7 @@ import {  Container,  GlobalStyle } from "./GlobalStyle"
 import Header from './components/header'
 import { countryContext } from "./GlobalContext"
 import MainRoutes from "./routes/MainRoutes"
+import Footer from "./components/footer"
 
 
 const App = () => {
@@ -11,7 +12,8 @@ const App = () => {
       <GlobalStyle toggleBg ={state.toggleBg}/>
         <Header/>
         <Container padTop>
-          <MainRoutes />        
+          <MainRoutes />
+          <Footer/>        
         </Container>
     </>
   )

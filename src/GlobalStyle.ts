@@ -22,6 +22,8 @@ export const GlobalStyle = createGlobalStyle<bgValue>`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
     color: ${(prop) => prop.toggleBg ? 'var(--white)': '#000'};
   }
 
